@@ -1,0 +1,143 @@
+
+images.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 1, 529
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
+bamboo2
+  rotate: false
+  xy: 803, 769
+  size: 175, 240
+  orig: 175, 240
+  offset: 0, 0
+  index: -1
+frog_minimal
+  rotate: false
+  xy: 803, 583
+  size: 184, 184
+  orig: 184, 184
+  offset: 0, 0
+  index: -1
+bamboo1
+  rotate: false
+  xy: 803, 341
+  size: 115, 240
+  orig: 115, 240
+  offset: 0, 0
+  index: -1
+plant_left
+  rotate: false
+  xy: 920, 401
+  size: 80, 180
+  orig: 80, 180
+  offset: 0, 0
+  index: -1
+plant_right
+  rotate: false
+  xy: 920, 219
+  size: 80, 180
+  orig: 80, 180
+  offset: 0, 0
+  index: -1
+flower
+  rotate: false
+  xy: 1, 3
+  size: 640, 524
+  orig: 640, 524
+  offset: 0, 0
+  index: -1
+lily_flower
+  rotate: false
+  xy: 643, 39
+  size: 268, 300
+  orig: 268, 300
+  offset: 0, 0
+  index: -1
+crocodile_mouth_left
+  rotate: false
+  xy: 643, 413
+  size: 150, 114
+  orig: 150, 114
+  offset: 0, 0
+  index: -1
+car
+  rotate: false
+  xy: 643, 347
+  size: 120, 64
+  orig: 120, 64
+  offset: 0, 0
+  index: -1
+crocodile_head_left
+  rotate: false
+  xy: 643, 1
+  size: 135, 36
+  orig: 135, 36
+  offset: 0, 0
+  index: -1
+crocodile_head_right
+  rotate: false
+  xy: 780, 1
+  size: 135, 36
+  orig: 135, 36
+  offset: 0, 0
+  index: -1
+flowers
+  rotate: false
+  xy: 913, 127
+  size: 75, 90
+  orig: 75, 90
+  offset: 0, 0
+  index: -1
+
+images2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lotus
+  rotate: false
+  xy: 1, 515
+  size: 640, 503
+  orig: 640, 503
+  offset: 0, 0
+  index: -1
+frog_minimal512
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+crocodile_mouth_right
+  rotate: false
+  xy: 643, 904
+  size: 150, 114
+  orig: 150, 114
+  offset: 0, 0
+  index: -1
+road
+  rotate: false
+  xy: 515, 393
+  size: 120, 120
+  orig: 120, 120
+  offset: 0, 0
+  index: -1
+duck_right
+  rotate: false
+  xy: 643, 817
+  size: 150, 85
+  orig: 150, 85
+  offset: 0, 0
+  index: -1
+lily
+  rotate: false
+  xy: 795, 967
+  size: 172, 51
+  orig: 172, 51
+  offset: 0, 0
+  index: -1
