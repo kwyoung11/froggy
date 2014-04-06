@@ -1,23 +1,25 @@
 package com.froggygame.game;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.moveTo;
+import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class PlayerCar extends Actor {
-	private final TrafficGame trafficGame;
+public class PlayerFrog extends Actor {
+	private final FroggyGame froggyGame;
 	private final Rectangle bounds = new Rectangle();
 	private int lane;
+	private boolean jumping;
 
-	public PlayerCar(TrafficGame trafficGame) {
-		this.trafficGame = trafficGame;
+	public PlayerFrog(FroggyGame froggyGame) {
+		this.froggyGame = froggyGame;
 		setWidth(160);
 		setHeight(85);
 		lane = 1;
-		setPosition(100, trafficGame.lane1 - getHeight()/2);
+		setPosition(100, froggyGame.lane1 - getHeight()/2);
 		setColor(Color.YELLOW);
 	}
 
@@ -50,15 +52,26 @@ public class PlayerCar extends Actor {
 
 		switch (lane) {
 			case 0:
-				addAction(moveTo(getX(), trafficGame.lane0 - getHeight()/2, 0.5f));
+				addAction(moveTo(getX(), froggyGame.lane0 - getHeight()/2, 0.5f));
 				break;
 			case 1:
-				addAction(moveTo(getX(), trafficGame.lane1 - getHeight()/2, 0.5f));
+				addAction(moveTo(getX(), froggyGame.lane1 - getHeight()/2, 0.5f));
 				break;
 			case 2:
-				addAction(moveTo(getX(), trafficGame.lane2 - getHeight()/2, 0.5f));
+				addAction(moveTo(getX(), froggyGame.lane2 - getHeight()/2, 0.5f));
 				break;
 		}
+	}
+
+	public void tryJump() {
+		if ((getActions().size == 0) && (!jumping)) jump();
+	}
+
+	private void jump() {
+		jumping = true;
+		addAction(sequence(moveTo(getX(), froggyGame.lane2 - getHeight() / 2, 0.5f),
+				           moveTo(getX(), froggyGame.lane1 - getHeight() / 2, 0.5f)));
+		jumping = false;
 	}
 
 	public Rectangle getBounds() {

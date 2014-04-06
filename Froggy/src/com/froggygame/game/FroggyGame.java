@@ -9,22 +9,22 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
 
-public class TrafficGame extends Table {
+public class FroggyGame extends Table {
 	private final InfiniteScrollBg backgroundRoad;
 	private final Array<EnemyCar> enemyCars;
 	private long lastCarTime = 0;
 	public final float lane2 = 390;
 	public final float lane1 = 240;
 	public final float lane0 = 90;
-	public PlayerCar playerCar;
+	public PlayerFrog playerFrog;
 
-	public TrafficGame() {
+	public FroggyGame() {
 		setBounds(0, 0, 800, 480);
 		setClip(true);
 		backgroundRoad = new InfiniteScrollBg(getWidth(),getHeight());
 		addActor(backgroundRoad);
-		playerCar = new PlayerCar(this);
-		addActor(playerCar);
+		playerFrog = new PlayerFrog(this);
+		addActor(playerFrog);
 		enemyCars = new Array<EnemyCar>();
 	}
 
@@ -41,14 +41,14 @@ public class TrafficGame extends Table {
 				iter.remove();
 				removeActor(enemyCar);
 			}
-			if (enemyCar.getBounds().overlaps(playerCar.getBounds())) {
+			if (enemyCar.getBounds().overlaps(playerFrog.getBounds())) {
                 iter.remove();
-                if (enemyCar.getX() > playerCar.getX()) {
-                    if (enemyCar.getY() > playerCar.getY()) enemyCar.crash(true, true);
+                if (enemyCar.getX() > playerFrog.getX()) {
+                    if (enemyCar.getY() > playerFrog.getY()) enemyCar.crash(true, true);
                     else enemyCar.crash(true, false);
                 }
                 else {
-                    if (enemyCar.getY() > playerCar.getY()) enemyCar.crash(false, true);
+                    if (enemyCar.getY() > playerFrog.getY()) enemyCar.crash(false, true);
                     else enemyCar.crash(false, false);
                 }
 			}
